@@ -12,12 +12,21 @@ module.exports = {
   module : {
     rules : [
       {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader'
-      },
+        test:/\.(s*)css$/,
+        use:['style-loader','css-loader', 'sass-loader']
+     },
       {
-        test: /\.png$/,
-        loader: 'url-loader?limit=100000&minetype=image/png'
+        test: /\.(gif|png|jpeg|svg)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              bypassOnDebug: true, // webpack@1.x
+              disable: true, // webpack@2.x and newer
+            },
+          },
+        ],
       },
       {
         test: /\.jpg/,

@@ -1,0 +1,49 @@
+html,body {
+  body {
+    position: absolute;
+    top: -20px;
+    background-size:cover;  
+
+    /* Workaround for some mobile browsers */
+    min-height:100%;    
+    padding-top: 20px;
+    padding-bottom: 20px;
+}    
+}
+
+
+
+.affix {
+  background-color: #eee;
+  -webkit-transition:padding 0.2s ease-out;
+  -moz-transition:padding 0.2s ease-out;  
+  -o-transition:padding 0.2s ease-out;         
+  transition:padding 0.2s ease-out;
+}
+
+@media (min-width:768px) {
+    .affix-top {
+      /* navbar style at top */
+      background-color:transparent;
+      border-color:transparent;
+      padding: 15px;
+      -webkit-transition:all 0.5s ease;
+      -moz-transition:all 0.5s ease; 
+      -o-transition:all 0.5s ease;         
+      transition:all 0.5s ease;  
+    }
+}
+
+nav .navbar-nav .nav-link,
+nav .navbar-brand {
+   color: rgb(187, 90, 90);
+   
+}
+body {
+  padding-top: -20px;
+}
+
+section {
+  height:calc(90% - 50px);
+  height: 90vh;
+}

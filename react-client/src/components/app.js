@@ -4,16 +4,23 @@ import { browserHistory } from 'react-router';
 import HomePage from './pages/homePage.js';
 import NavBar from './headerComponent/navBar.js';
 import Footer from './footerComponent/footer.js';
+import styles from './../../dist/styles.scss';
+import { Container } from 'react-bootstrap';
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
-          <NavBar />
-          <Route name="home" exact path="/" component={HomePage} />
+   
+   
+          <NavBar id="nav" class="navbar fixed-top navbar-toggleable-sm" data-spy="affi" />
+    
+          <Route exact path="/" component={HomePage} className = "first" />
+  
+  
           <Footer />
-        </div>
+          </div>
       </Router>
     )
   }
